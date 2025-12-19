@@ -1,0 +1,10 @@
+# model
+*.pth
+*.bin
+*.safetensors
+*.pt
+
+# cache
+__pycache__/
+.cache/
+.env
