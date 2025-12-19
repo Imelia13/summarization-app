@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Text Summarization</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-glow"></div>
+
+  <div class="app">
+
+    <header class="header">
+      <h1>AI Text Summarization</h1>
+      <p>Research-grade automatic summarization for Indonesian text</p>
+    </header>
+
+    <main class="grid">
+
+      <section class="panel input-panel">
+        <h2>Input Artikel</h2>
+        <textarea
+          id="text"
+          placeholder="Masukkan teks artikel panjang di sini..."
+          oninput="updateCounter()"
+        ></textarea>
+
+        <!-- Counter -->
+        <div class="counter">
+            <span id="wordCount">0 kata</span>
+            <span>•</span>
+            <span id="charCount">0 karakter</span>
+        </div>
+        
+        <button onclick="summarize()">Generate Summary</button>
+      </section>
+
+      <section class="panel output-panel">
+        <h2>Ringkasan</h2>
+        <div id="result" class="output">
+          <span class="hint">Hasil ringkasan akan ditampilkan di sini</span>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span>© 2025 — AI Summarization System</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
